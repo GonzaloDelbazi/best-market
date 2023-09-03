@@ -1,0 +1,43 @@
+@import '../../index.scss';
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $bg-dark;
+  box-shadow: 0px 0px 15px 4px rgba(0, 39, 39, 0.651);
+}
+
+input[type=text] {
+    padding: 10px;
+    width: 80%;
+    height: 100%;
+    font-size: 18px;
+    border: 2px solid $bg-dark;
+    border-radius: 8px 0px 0px 8px;
+    text-decoration-style: none;
+    will-change: filter;
+    transition: filter 300ms;
+  }
+
+  input[type=text]:focus {
+    outline: 0px;
+    filter: drop-shadow(0 0 .7em teal);
+  }
+
+  button {
+    border-radius: 0px 8px 8px 0px !important;
+  }
+
+  .logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+  }
+  .logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+  }
+  .logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+  }

@@ -1,5 +1,4 @@
-$primary-color: teal;
-$font-stack: Helvetica, sans-serif;
+@import '../index.scss';
 
 .nav-bar {
     font: 100% $font-stack;
@@ -7,17 +6,21 @@ $font-stack: Helvetica, sans-serif;
     align-items: center;
     width: 100%;
     justify-content: space-between;
-    padding: 20px;
     color: #fff;
     background-color: $primary-color;
+
+    &-dark {
+        background-color: $bg-dark;
+    }
 }
 
-nav-link a {
-    color: #fff;
+.nav-link {
+    padding: 20px;
 }
 
 .logo {
-    font-size: 24px;
+    display: flex;
+    align-items: center;
 }
 
 .menu {
@@ -31,7 +34,17 @@ nav-link a {
   background-color: #4c9e9e;
   border-radius: 5px;
   transition: 0.2s ease;
+
+  &-dark {
+    background-color: #2b5a5a;
+
+  }
+
 }
+
+.menu-dark li:hover {
+    background-color: #2b5a5a;
+  }
 
 .menu li {
     padding: 5px 14px;
@@ -48,6 +61,14 @@ nav-link a {
     top: 35px;
     display: none;
     border-radius: 8px;
+
+    &-dark {
+        background-color: $bg-dark;
+    }
+}
+
+.menu a {
+    color: #fff;
 }
 
 .dropdown li + li {
@@ -62,6 +83,10 @@ nav-link a {
 
 .dropdown li:hover {
     background-color: #4c9e9e;
+
+    &-dark {
+      background-color: #2b5a5a;
+    }
 }
 
 .services:hover .dropdown {
@@ -85,32 +110,20 @@ nav-link a {
         position: absolute;
         right: 0;
         left: 0;
-        background-color: $primary-color;
-        padding: 16px;
-        align-items: center;
-    }
-
-    .menu li:hover {
-        display: inline-block;
-        background-color:#4c9e9e;
-        transition: 0.3s ease;
-    }
-
-    .dropdown {
-        left: 50%;
-        top: 0px;
-        transform: translateX(35%);
+        padding-bottom: 20px;
+        background-color: $bg-dark;
     }
 
     .menu li + li {
         margin-top: 10px;
     }
 
-    input[type=checkbox]:checked ~ .menu {
+    .hamburger {
         display: block;
     }
 
-    .hamburger {
-        display: block;
+    input[type=checkbox]:checked ~ .menu {
+        display: inline-flex;
+        flex-direction: column;
     }
 }
