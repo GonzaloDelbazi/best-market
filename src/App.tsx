@@ -1,15 +1,16 @@
-import './App.css'
-import Routes from './routes/routes'
-import NavBar from './components/navBar'
+import "./App.css";
+import NavBar from "./components/navBar";
+import Routes from "./routes/routes";
 
 function App() {
-
   return (
     <div className="app">
       <NavBar></NavBar>
-      <Routes></Routes>
+      <div className="screen">
+        <Routes></Routes>
+      </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
